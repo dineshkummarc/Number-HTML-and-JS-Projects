@@ -1,0 +1,26 @@
+<p>How many times do we throw the dice: </p>
+<input id="input"type="number" min="0" value="0">
+<input type="button" onclick="dice();" value="Ok" /> 
+<p id="results"></p>
+<script type="text/javascript">
+function dice(){
+	var input = document.getElementById('input').value;
+	var results = document.getElementById('results');
+	var tails = 0;
+	var heads = 0;
+	results.innerHTML = "";
+	for (i=0;i <= input-1 ;i++) {
+    	var y = (Math./*floor*/round(Math.random()/**2*/)+1);
+    	if(y == 1){
+			tails = tails + 1;	
+  		}
+    	if(y == 2){
+     		heads = heads + 1;
+  		}
+  	}	
+	results.innerHTML += "Tails: " + tails;
+	results.innerHTML += "<br>";
+	results.innerHTML += "Heads: " + heads ;   
+}
+</script>
+
