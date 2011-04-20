@@ -1,5 +1,5 @@
-Numero total: <input type="number" value="0" min="0" /><br/>
-Numero de Personas: <input type="number" value="0" min="0" /><br/>
+Total Number: <input type="number" value="0" min="0" /><br/>
+Divide by: <input type="number" value="0" min="0" /><br/>
 <button onclick="main();">OK</button>
 <script type="text/javascript">
 function main() {
@@ -9,9 +9,9 @@ function main() {
 	var n = document.body.getElementsByTagName("input")[0].value;
 	var a = document.body.getElementsByTagName("input")[1].value;		
 	var output = document.createElement("p");		
-	output.innerHTML = "Resultado: " + (n-(n%a))/a ;
+	output.innerHTML = "Result: " + (n-(n%a))/a ;
 	output.innerHTML += "<br>";
-	output.innerHTML += "Resto: " + n%a ;
+	output.innerHTML += "Remainder: " + n%a ;
 	output.id = "output";	
 	document.body.appendChild(output);
 
